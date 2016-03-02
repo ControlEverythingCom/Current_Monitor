@@ -52,7 +52,6 @@ int CurrentMonitor::readChannelCurrentMa(int channel){
         return failedCommand;
     }
     int current = convertToInt(currentReading[0], currentReading[1], currentReading[2]);
-    Serial.printf("Current mA: %i", current);
     return current;
 }
 
@@ -201,7 +200,6 @@ bool CurrentMonitor::i2CRead(int len, byte *buffer){
     
     if(Wire.available() < len){
         Serial.println("Read timeout");
-        Serial.printf("bytes available: %i \n", Wire.available());
         //read timed out, controller did not respond
         return false;
     }
