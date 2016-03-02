@@ -85,7 +85,7 @@ void loop() {
                 currentReading = c;
                 Serial.printf("currentReading: %G \n", currentReading);
                 if(currentReading > tripLimit && lastReading < currentReading){
-                    Particle.publish("Tripped", "light_on", 60, PRIVATE);
+                    Particle.publish("Overload", "circuit_1", 60, PRIVATE);
                 }
                 if(currentReading > tripLimit){
                     relay.turnOffRelay();
