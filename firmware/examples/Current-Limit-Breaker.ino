@@ -1,7 +1,4 @@
 // This #include statement was automatically added by the Particle IDE.
-#include "NCD1Relay/NCD1Relay.h"
-
-// This #include statement was automatically added by the Particle IDE.
 #include "Current_Monitor/Current_Monitor.h"
 
 CurrentMonitor current;
